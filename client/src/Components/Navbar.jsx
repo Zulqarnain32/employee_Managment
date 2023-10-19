@@ -1,45 +1,52 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-
-import axios from "axios";
+import React from "react";
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
-  const handleLogout = () => {
-    console.log("Logout route reached");
-    window.localStorage.clear();
-    axios
-      .get("http://localhost:5000/logout")
-      .then((result) => {
-        console.log(result);
-        window.location.reload();
-      })
-      .catch((err) => console.log(err));
-  };
   return (
     <>
-      <nav>
-        <div className="logo-side"></div>
-        <div className="links-side">
-          <Link className="nav-links" to="/">
-            HOME
-          </Link>
-          <Link className="nav-links" to="/secret">
-            FOODS
-          </Link>
+      <div className="sidebar">
+        <div>
+          <h2 className="name">
+            Code
+            <span className="with">With</span>
+            <span className="me">Passion</span>
+          </h2>
+          <button className="one">
+            <div>
+              <img src="/assets/employees.png" className="sidebar-icons" />
+            </div>
+            <div>Employees</div>    
+          </button>
+          <button className="one">
+            <div>
+              <img src="/assets/dashboard.png" className="sidebar-icons" />
+            </div>
+            <div>Dashboard</div>
+          </button>
+          <button className="one">
+            <div>
+              <img src="/assets/user.png" className="sidebar-icons" />
+            </div>
+            <div>Profile</div>
+          </button>   
+          <Link to = "/register">
+          <button className="one">
+            <div>
+            <img src="/assets/register.png" className="sidebar-icons" />
 
-          {window.localStorage.length > 0 ? (
-            <Link className="nav-links" to="/">
-              <button className="common-btn" onClick={handleLogout}>
-                LOGOUT
-              </button>
-            </Link>
-          ) : (
-            <Link className="nav-links" to="/login">
-              <button className="common-btn">LOGIN</button>
-            </Link>
-          )}
+            </div>
+            <div>Register</div>
+          </button>
+          </Link>
+          <button className="one">
+            <div>
+            <img src="/assets/logout.png" className="sidebar-icons" />
+
+            </div>
+            <div>Logout</div>
+          </button>
         </div>
-      </nav>
+      </div>
     </>
   );
 };

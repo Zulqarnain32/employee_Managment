@@ -64,6 +64,7 @@ const Registration = () => {
         </Link>
       </form>
     </div>
+    
   );
 };
 

@@ -11,12 +11,14 @@ const Navbar = () => {
             <span className="with">With</span>
             <span className="me">Passion</span>
           </h2>
+          <Link to = "/addemployee">
           <button className="one">
             <div>
               <img src="/assets/employees.png" className="sidebar-icons" />
             </div>
             <div>Employees</div>    
           </button>
+          </Link>
           <button className="one">
             <div>
               <img src="/assets/dashboard.png" className="sidebar-icons" />

@@ -6,6 +6,8 @@ import Registration from './Components/Registration'
 import Secret from './Components/Secret'
 import { BrowserRouter,Routes,Route } from "react-router-dom"
 import "./App.css"
+import AddEmployee from './Components/AddEmployee'
+import CreateEmployee from './Components/CreateEmployee'
 
 const App = () => {
   return (
@@ -16,7 +18,8 @@ const App = () => {
           <Route path = "/" element = {<Home/>}/>
           <Route path = "/login" element = {<Login/>}/>
           <Route path = "/register" element = {<Registration/>}/>
-          <Route path = "/secret" element = {localStorage.length > 0 ? <Secret/> : <Login/>}/>
+          <Route path = "/addemployee" element = {<AddEmployee/>}/>
+          <Route path = "/createemployee" element = {<CreateEmployee/>}/>
         </Routes>
       </BrowserRouter>
     </>

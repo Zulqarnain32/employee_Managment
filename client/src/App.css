@@ -10,6 +10,9 @@ body{
   width: calc(100% + 250px);
   overflow-x: hidden;
 }
+::-webkit-scrollbar{
+  display: none;
+}
 
 /*? Registration Css */
 .register-container{
@@ -29,13 +32,13 @@ p{
   margin-top: 14px;
   margin-bottom: 5px;
 }
-.register-container input{
+ input{
   width: 100%;
   height: 36px;
   padding: 2px 13px;
   font-size: 17px;
 }
-.register-form button{
+ button{
   height: 36px;
   width: 100%;
   margin-top: 12px;
@@ -107,4 +110,88 @@ p{
   width: 30px;
   margin-right: 10px;
   margin-top: 3px;
+}
+
+/*? Add Employee  */
+.add-employee-container{
+  width: 100%;
+}
+.title{
+  text-align: center;
+  padding: 13px 0;
+  box-shadow: rgba(149, 157, 165, .5) 0px 8px 24px;
+
+}
+.sub-title{
+  text-align: center;
+  margin-top: 30px;
+}
+.add-emp{
+  margin: 10px auto;
+  width: 64%;
+}
+.add-emp .add-emp-link{
+  background-color: rgb(11, 54, 11);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  height: 37px;
+  padding: 0px 16px ;
+  width: max-content;
+}
+.table-container{
+  height: 200px;
+  width: 64%;
+  margin: 20px auto;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+tr{
+  border-bottom: 1px solid rgb(157, 157, 157);
+}
+.table th, .table td {
+  padding: 13px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  overflow: none;
+}
+.table button{
+  width: 70px;
+  border: none;
+  height: 30px;
+  color: #fff;
+  cursor: pointer;
+
+}
+.edit{
+  background-color: rgb(13, 223, 69);
+  margin-right: 3px;
+}
+.delete{
+  background-color: red;
+  margin-left: 3px;
+}
+
+
+/*? Create Employee  */
+.create-employee{
+  width: 64%;
+  margin:  40px auto;
+  margin-bottom: 0;
+}
+.add-form{
+   width: 400px;
+   margin: 20px auto;
+   padding: 10px 20px;
+   background-color: #fff;
+   box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+   margin-bottom: 0;
+}
+.btn{
+  margin-top: 20px;
 }

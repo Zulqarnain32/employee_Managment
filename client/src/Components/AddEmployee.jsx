@@ -5,9 +5,7 @@ const AddEmployee = () => {
   return (
     <>
       <div className="add-employee-container">
-        <div className="title">
-            <h2>Employee Management System</h2>
-        </div>
+       
            <div className='sub-title'>
               <h2>Employee List</h2>
            </div>
@@ -27,6 +25,67 @@ const AddEmployee = () => {
                      <th>Action</th>
                   </tr>
                   <tr>
+                    <td>Zulqarnain</td>
+                    <td>zulqarnain@gmail.com</td>
+                    <td>Shahdara Lhr</td>
+                    <td>Developer</td>
+                    <td>$10000.00</td>
+                    <td>
+                       <button className='edit'>Edit</button>
+                       <button className='delete'>Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Zulqarnain</td>
+                    <td>zulqarnain@gmail.com</td>
+                    <td>Shahdara Lhr</td>
+                    <td>Developer</td>
+                    <td>$10000.00</td>
+                    <td>
+                       <button className='edit'>Edit</button>
+                       <button className='delete'>Delete</button>
+                    </td>
+                  </tr> <tr>
+                    <td>Zulqarnain</td>
+                    <td>zulqarnain@gmail.com</td>
+                    <td>Shahdara Lhr</td>
+                    <td>Developer</td>
+                    <td>$10000.00</td>
+                    <td>
+                       <button className='edit'>Edit</button>
+                       <button className='delete'>Delete</button>
+                    </td>
+                  </tr> <tr>
+                    <td>Zulqarnain</td>
+                    <td>zulqarnain@gmail.com</td>
+                    <td>Shahdara Lhr</td>
+                    <td>Developer</td>
+                    <td>$10000.00</td>
+                    <td>
+                       <button className='edit'>Edit</button>
+                       <button className='delete'>Delete</button>
+                    </td>
+                  </tr> <tr>
+                    <td>Zulqarnain</td>
+                    <td>zulqarnain@gmail.com</td>
+                    <td>Shahdara Lhr</td>
+                    <td>Developer</td>
+                    <td>$10000.00</td>
+                    <td>
+                       <button className='edit'>Edit</button>
+                       <button className='delete'>Delete</button>
+                    </td>
+                  </tr> <tr>
+                    <td>Zulqarnain</td>
+                    <td>zulqarnain@gmail.com</td>
+                    <td>Shahdara Lhr</td>
+                    <td>Developer</td>
+                    <td>$10000.00</td>
+                    <td>
+                       <button className='edit'>Edit</button>
+                       <button className='delete'>Delete</button>
+                    </td>
+                  </tr> <tr>
                     <td>Zulqarnain</td>
                     <td>zulqarnain@gmail.com</td>
                     <td>Shahdara Lhr</td>

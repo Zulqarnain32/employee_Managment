@@ -8,11 +8,13 @@ import { BrowserRouter,Routes,Route } from "react-router-dom"
 import "./App.css"
 import AddEmployee from './Components/AddEmployee'
 import CreateEmployee from './Components/CreateEmployee'
+import Title from './Components/Title'
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+      <Title/>
       <Navbar/>
         <Routes>
           <Route path = "/" element = {<Home/>}/>

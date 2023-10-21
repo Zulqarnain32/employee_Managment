@@ -7,7 +7,7 @@
 }
 body{
   position: relative;
-  width: calc(100% + 250px);
+  width: calc(100%);
   overflow-x: hidden;
 }
 ::-webkit-scrollbar{
@@ -16,7 +16,7 @@ body{
 
 /*? Registration Css */
 .register-container{
-  height: 100vh;
+  height: calc(100vh - 60px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -64,7 +64,24 @@ p{
   position: fixed;
   top: 0;
   left: 0;
+  transition: .7s;
 }
+.menu-icon{
+  position: fixed;
+  top: 13px;
+  right: 30px;
+}
+.menu-icon img{
+  width: 35px;
+  cursor: pointer; 
+}
+.isfalse{
+  left: -253px;
+}
+.istrue{
+  left: 0;
+}
+
 .sidebar div{
   text-align: center;
 }
@@ -82,7 +99,8 @@ p{
 }
 .name{
   color: #0bf69c;
-  padding: 30px 0;
+  padding-top: 60px;
+  padding-bottom: 20px;
   font-size: 20px;
 }
 .with{
@@ -118,9 +136,12 @@ p{
 }
 .title{
   text-align: center;
-  padding: 13px 0;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  line-height: 60px;
   box-shadow: rgba(149, 157, 165, .5) 0px 8px 24px;
-
 }
 .sub-title{
   text-align: center;
@@ -128,7 +149,7 @@ p{
 }
 .add-emp{
   margin: 10px auto;
-  width: 64%;
+  width: 90%;
 }
 .add-emp .add-emp-link{
   background-color: rgb(11, 54, 11);
@@ -140,8 +161,7 @@ p{
   width: max-content;
 }
 .table-container{
-  height: 200px;
-  width: 64%;
+  width: 90%;
   margin: 20px auto;
 }
 .table {
@@ -149,24 +169,27 @@ p{
   border-collapse: collapse;
 }
 tr{
-  border-bottom: 1px solid rgb(157, 157, 157);
+  border-bottom: 1px solid rgb(174, 166, 166);
+}
+th{
+  padding: 16px 0;
 }
 .table th, .table td {
-  padding: 13px;
   text-align: left;
-}
+  padding-left: 10px;
 
+}
 .table th {
   background-color: #f2f2f2;
   overflow: none;
 }
 .table button{
-  width: 70px;
+  width: 60px;
   border: none;
   height: 30px;
   color: #fff;
   cursor: pointer;
-
+  font-size: 15px;
 }
 .edit{
   background-color: rgb(13, 223, 69);
@@ -177,12 +200,12 @@ tr{
   margin-left: 3px;
 }
 
-
 /*? Create Employee  */
 .create-employee{
-  width: 64%;
-  margin:  40px auto;
-  margin-bottom: 0;
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .add-form{
    width: 400px;
@@ -194,4 +217,56 @@ tr{
 }
 .btn{
   margin-top: 20px;
+}
+
+
+/*? Responsive css is here  */
+@media(max-width:400px){
+  body{
+    width: 100%;
+  }
+  .menu-icon{
+    right: 12px;
+  }
+  .create-employee{
+    width: 100%;
+  }
+  .add-form{
+    width: 340px;
+  }
+  .title{
+    font-size: 13px;  
+    padding-left: 14px;
+    text-align: left;
+  }
+  .add-employee-container{
+    width: 100%;
+  }
+  .add-emp{
+    margin: 10px auto;
+    width: 95%;
+  }
+  .table-container{
+    width: 95%;
+  }
+  th{
+    display: none;
+  }
+   .table td {
+    text-align: center;
+    text-align: left;
+    padding-left: 00px;
+    font-size: 20px;
+  
+  }
+ 
+  td{
+    display: block;
+    margin: 20px  auto;
+  }
+  
+  
+
+
+
 }

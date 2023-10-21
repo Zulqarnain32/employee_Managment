@@ -5,6 +5,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
+const employee = require('./Routes/employee')
 
 const UserModel = require('./model/UserSchema')
 const port = 5000;
@@ -13,6 +14,7 @@ app.use(cors({
     method: ['GET','POST'],
     credentials:true
 }))
+app.use('employee',employee)
 app.use(express.json())
 app.use(cookieParser())
 

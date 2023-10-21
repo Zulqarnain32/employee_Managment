@@ -4,8 +4,8 @@ import axios from "axios"
 
 const Login = () => {
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [ email, setEmail ] = useState('');
+  const [ password, setPassword ] = useState('');
   const [ error,setError ] = useState('')
 
   const navigate = useNavigate()
@@ -13,7 +13,7 @@ const Login = () => {
   axios.defaults.withCredentials = true
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/login', {email,password})
+    axios.post('http://localhost:5000/auth/login', {email,password})
     .then((result) => {
       if(result.data.message == "user login "){
         window.localStorage.setItem("id",result.data.id)

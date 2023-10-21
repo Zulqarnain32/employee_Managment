@@ -9,11 +9,16 @@ const CreateEmployee = () => {
   const [ job, setJob ] = useState()
   const [ sallary, setSallary ] = useState()
 
+  const [error,setError ] = useState()
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:5000/employee', {name,email,address,job,sallary})
+    axios.post('http://localhost:5000/employee/employee', {name,email,address,job,sallary})
     .then(result => {
         console.log(result.data);
+        if(result.data.message == "please fill fields"){
+           setError("please fill all fields")
+        }
     }).catch(err => console.log(err))
   }
   return (
@@ -62,6 +67,7 @@ const CreateEmployee = () => {
           value={sallary}
           onChange={(e) => setSallary(e.target.value)}
         />
+        <p className="error">{error}</p>
         <button type="submit" className="button btn">Add Employee</button>
         </form>
       </div>

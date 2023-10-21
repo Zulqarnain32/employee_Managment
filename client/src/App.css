@@ -181,10 +181,11 @@ th{
   padding-left: 10px;
 
 }
+
 .table th {
   background-color: #f2f2f2;
-  overflow: none;
 }
+
 .table button{
   width: 60px;
   border: none;

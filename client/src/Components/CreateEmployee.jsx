@@ -1,24 +1,29 @@
 import React, { useState } from "react";
 import axios from "axios"
+import { useNavigate } from "react-router-dom" 
 
 const CreateEmployee = () => {
   
-  const [ name,setName ]  = useState()
-  const [ email, setEmail ] = useState()
-  const [ address, setAddress ] = useState()
-  const [ job, setJob ] = useState()
-  const [ sallary, setSallary ] = useState()
+  const [ name,setName ]  = useState("")
+  const [ email, setEmail ] = useState("")
+  const [ address, setAddress ] = useState("")
+  const [ job, setJob ] = useState("")
+  const [ sallary, setSallary ] = useState("")
 
   const [error,setError ] = useState()
-
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault()     
     axios.post('http://localhost:5000/employee/employee', {name,email,address,job,sallary})
     .then(result => {
+      if(result.data.message == "fill form"){
+        setError("Please fill all fields")
+      } else {
+        navigate('/addemployee')
+      }
+      
         console.log(result.data);
-        if(result.data.message == "please fill fields"){
-           setError("please fill all fields")
-        }
+       
     }).catch(err => console.log(err))
   }
   return (

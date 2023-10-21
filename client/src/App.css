@@ -4,6 +4,7 @@
   box-sizing: border-box;
   list-style: none;
   font-family: 'Poppins',sans-serif;
+  text-decoration: none;
 }
 body{
   position: relative;
@@ -102,6 +103,7 @@ p{
   padding-top: 60px;
   padding-bottom: 20px;
   font-size: 20px;
+  text-align: center;
 }
 .with{
   color: rgb(21, 215, 241);
@@ -219,6 +221,9 @@ th{
   margin-top: 20px;
 }
 
+.edit-btn{
+  color: #fff;
+}
 
 /*? Responsive css is here  */
 @media(max-width:400px){
@@ -227,6 +232,11 @@ th{
   }
   .menu-icon{
     right: 12px;
+    z-index: 11;
+  }
+  .sidebar{
+    margin-top: 60px;
+    height: calc(100vh - 60px);
   }
   .create-employee{
     width: 100%;
@@ -238,6 +248,7 @@ th{
     font-size: 13px;  
     padding-left: 14px;
     text-align: left;
+    z-index: 10;
   }
   .add-employee-container{
     width: 100%;
@@ -255,18 +266,41 @@ th{
    .table td {
     text-align: center;
     text-align: left;
+    text-align: right;
     padding-left: 00px;
     font-size: 20px;
-  
   }
- 
   td{
     display: block;
     margin: 20px  auto;
   }
-  
-  
 
+  td::before{
+    position: absolute;
+    left: 10px;
+    font-weight: 700;
+  }
 
+  td:nth-child(1)::before{
+    content: "Name";
+  }
+  td:nth-child(2)::before{
+    content: "Email";
+  }
+  td:nth-child(3)::before{
+    content: "Address";
+  }
+  td:nth-child(4)::before{
+    content: "Job";   
+  }
+  td:nth-child(5)::before{
+    content: "Sallary";
+  }
+  td:nth-child(6)::before{
+    content: "Action";
+  }
+  .table button{
+    margin-top: -4px;
+  }
 
 }

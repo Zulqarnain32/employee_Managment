@@ -3,13 +3,13 @@ import Home from './Components/Home'
 import Navbar from './Components/Navbar'
 import Login from './Components/Login'
 import Registration from './Components/Registration'
-import Secret from './Components/Secret'
 import { BrowserRouter,Routes,Route } from "react-router-dom"
-import "./App.css"
 import AddEmployee from './Components/AddEmployee'
 import CreateEmployee from './Components/CreateEmployee'
 import Title from './Components/Title'
+import Edit from './Components/Edit'
 
+import "./App.css"
 const App = () => {
   return (
     <>
@@ -22,6 +22,7 @@ const App = () => {
           <Route path = "/register" element = {<Registration/>}/>
           <Route path = "/addemployee" element = {<AddEmployee/>}/>
           <Route path = "/createemployee" element = {<CreateEmployee/>}/>
+          <Route path = "/edit" element = {<Edit/>}/>
         </Routes>
       </BrowserRouter>
     </>

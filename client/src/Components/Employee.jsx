@@ -15,6 +15,15 @@ const Employee = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const handleDelete = (id) => {
+    axios.delete('http://localhost:5000/employee/deleteUser/'+ id)
+    .then(result => {
+      console.log(result);
+      window.location.reload();
+    })
+
+  }
+
   return (
     <>
       <div className="add-employee-container">
@@ -25,6 +34,7 @@ const Employee = () => {
           <Link to="/createemployee">
             <button className="add-emp-link">Add Employee</button>
           </Link>
+            <div className="emp-length">{employee.length} Employees</div>
         </div>
         <div className="table-container">
           <table className="table">
@@ -41,18 +51,18 @@ const Employee = () => {
             <tbody>
               {employee.map((emp,index) => (
                 <tr key={index}>
-                  <td>{emp.name}</td>
+                  <td className="captalize">{emp.name}</td>
                   <td>{emp.email}</td>
-                  <td>{emp.address}</td>
-                  <td>{emp.job}</td>
+                  <td className="captalize">{emp.address}</td>
+                  <td className="captalize">{emp.job}</td>
                   <td>{emp.sallary}</td>
                   <td>
                     <button className="edit">
-                      <Link to="/edit" className="edit-btn">
+                      <Link to={`/edit/${emp._id}`} className="edit-btn">
                         Edit
                       </Link>
                     </button>
-                    <button className="delete">Delete</button>
+                    <button className="delete" onClick={(e) => handleDelete(emp._id)}>Delete</button>
                   </td>
                 </tr>
               ))}

@@ -1,15 +1,41 @@
-import React,{useState} from 'react'
+import axios from 'axios'
+import React,{useEffect, useState} from 'react'
+import { useParams,useNavigate } from 'react-router-dom'
 
 const Edit = () => {
 
-    const [ name,setName ]  = useState()
-    const [ email, setEmail ] = useState()
-    const [ address, setAddress ] = useState()
-    const [ job, setJob ] = useState()
-    const [ sallary, setSallary ] = useState()
+    const { id } = useParams()
+    const [ name,setName ]  = useState("")
+    const [ email, setEmail ] = useState("")
+    const [ address, setAddress ] = useState("")
+    const [ job, setJob ] = useState("")
+    const [ sallary, setSallary ] = useState("")
+    const [em,serEm] = useState("")
+    const navigate = useNavigate()
+    console.log("This is his id " + id);
 
-    const handleSubmit = () => {
+    useEffect(() => {
+      axios.get('http://localhost:5000/employee/getUser/' + id)
+      .then(result => {
+        console.log(result);
+        setName(result.data.name)
+        setEmail(result.data.email)
+        setAddress(result.data.address)
+        setJob(result.data.job)
+        setSallary(result.data.sallary)
+       
+      }).catch(err => console.log(err))
 
+    }, [])
+
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      axios.put('http://localhost:5000/employee/editUser/' + id, { name,email,address,job,sallary })
+        .then(result => {
+          console.log(result);
+          navigate('/addemployee')
+      })
     }
   return (
     <>

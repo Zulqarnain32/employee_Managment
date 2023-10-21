@@ -152,6 +152,23 @@ p{
 .add-emp{
   margin: 10px auto;
   width: 90%;
+  display: flex;
+  align-items: center;
+}
+.captalize{
+  text-transform: capitalize;
+}
+
+.emp-length{
+  background-color: rgb(255, 104, 4);
+  height: 37px;
+  margin-left: 40px;
+  width: 200px;
+  text-align: center;
+  line-height: 37px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
 }
 .add-emp .add-emp-link{
   background-color: rgb(11, 54, 11);
@@ -225,6 +242,7 @@ th{
 .edit-btn{
   color: #fff;
 }
+
 
 /*? Responsive css is here  */
 @media(max-width:400px){

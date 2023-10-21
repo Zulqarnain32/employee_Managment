@@ -18,7 +18,10 @@ const CreateEmployee = () => {
     .then(result => {
       if(result.data.message == "fill form"){
         setError("Please fill all fields")
-      } else {
+      } else if(result.data.message == "email already exist"){
+        setError("email already exist")
+      }
+      else {
         navigate('/addemployee')
       }
       
